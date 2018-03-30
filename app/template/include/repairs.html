@@ -1,0 +1,128 @@
+<div class="row filters">
+    <div class="col-sm-3">
+        <select class="form-control">
+            <option id="status-all">Все заявки</option>
+            <option id="status-done">Ремонт выполнен</option>
+            <option id="status-process">Изделие находится в ремонте</option>
+            <option id="status-stopped">Ремонт приостановлен, свяжитесь с администратором</option>
+            <option id="status-wait">Ожидание поставки запчасти</option>
+            <option id="status-request">Технический запрос</option>
+        </select>
+    </div>
+    <div class="col-sm-3">
+        <div class="input-group" id="date">
+            <input type="text" class="form-control" name="date" placeholder="Период с"/>
+            <span class="input-group-addon">
+                <span class="glyphicon glyphicon-calendar"></span>
+            </span>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="input-group">
+            <input type="text" id="search-text" class="form-control" placeholder="СЦ / IMEI / UIN / SN">
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="button" id="search">Искать</button>
+            </span>
+        </div>
+        <!-- /input-group -->
+    </div>
+    <div class="col-sm-3">
+        <button class="btn btn-success" onclick="alert('Скачается отчет с выбранными заявками')">Скачать отчет</button>
+    </div>
+</div>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Заказ на ремонт</th>
+            <th>Дата принятия</th>
+            <th>Статус заявки</th>
+            <th>IMEI</th>
+            <th>UIN</th>
+            <th>SN</th>
+            <th>Описание проблемы</th>
+        </tr>
+    </thead>
+    <tbody id='orders'>
+        <tr class="success" data-status="status-done" data-date="2018.03.01">
+            <td>СЦ-23417</td>
+            <td class="order-date">2018.03.01</td>
+            <td>Ремонт выполнен</td>
+            <td>8716254903</td>
+            <td>4726815309</td>
+            <td>4625817903</td>
+            <td>Разбит экран</td>
+        </tr>
+        <tr class="active" data-status="status-wait" data-date="2018.03.02">
+            <td>СЦ-23420</td>
+            <td class="order-date">2018.03.02</td>
+            <td>Ожидание поставки запчасти</td>
+            <td>5346981207</td>
+            <td>5164083972</td>
+            <td>2581043796</td>
+            <td>Замена батареи</td>
+        </tr>
+        <tr class="danger" data-status="status-stopped" data-date="2018.03.03">
+            <td>СЦ-23480</td>
+            <td class="order-date">2018.03.03</td>
+            <td>Ремонт приостановлен, свяжитесь с администратором СЦ</td>
+            <td>5346981207</td>
+            <td>5164083972</td>
+            <td>2581043796</td>
+            <td>Ремонт материнской платы</td>
+        </tr>
+        <tr class="warning" data-status="status-process" data-date="2018.03.04">
+            <td>СЦ-23421</td>
+            <td class="order-date">2018.03.04</td>
+            <td>Изделие находится в ремонте</td>
+            <td>4230965178</td>
+            <td>1458076923</td>
+            <td>2670438951</td>
+            <td>Сгорел блок питания</td>
+        </tr>
+        <tr class="info" data-status="status-request" data-date="2018.03.05">
+            <td>СЦ-23412</td>
+            <td class="order-date">2018.03.05</td>
+            <td>Технический запрос</td>
+            <td>8719325640</td>
+            <td>5648372190</td>
+            <td>6218075349</td>
+            <td>Залитие</td>
+        </tr>
+        <tr class="success" data-status="status-done" data-date="2018.03.06">
+            <td>СЦ-23488</td>
+            <td class="order-date">2018.03.06</td>
+            <td>Ремонт выполнен</td>
+            <td>9018754623</td>
+            <td>2681475309</td>
+            <td>0417936258</td>
+            <td>Разбит экран</td>
+        </tr>
+        <tr class="danger" data-status="status-stopped" data-date="2018.03.07">
+            <td>СЦ-23480</td>
+            <td class="order-date">2018.03.07</td>
+            <td>Ремонт приостановлен, свяжитесь с администратором СЦ</td>
+            <td>5346981207</td>
+            <td>5164083972</td>
+            <td>2581043796</td>
+            <td>Ремонт материнской платы</td>
+        </tr>
+        <tr class="info" data-status="status-request" data-date="2018.03.08">
+            <td>СЦ-23485</td>
+            <td class="order-date">2018.03.08</td>
+            <td>Технический запрос</td>
+            <td>8719325640</td>
+            <td>5648372190</td>
+            <td>6218075349</td>
+            <td>Залитие</td>
+        </tr>
+        <tr class="warning" data-status="status-process" data-date="2018.03.09">
+            <td>СЦ-23496</td>
+            <td class="order-date">2018.03.09</td>
+            <td>Изделие находится в ремонте</td>
+            <td>4230965178</td>
+            <td>1458076923</td>
+            <td>2670438951</td>
+            <td>Сгорел блок питания</td>
+        </tr>
+    </tbody>
+</table>
