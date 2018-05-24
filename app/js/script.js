@@ -11,6 +11,8 @@ $(function () {
 
     $('#search').on('click', searchText)
 
+    $('.date-col, .status-col').on('click', sortDate)
+
     function checkInput() {
         var date = $('#date input').val();
         var dateMillieconds = Date.parse(date); // получим выбранную дату в мс
@@ -55,6 +57,10 @@ $(function () {
                 }
             })
         }
+    }
+
+    function sortDate(){
+        $(this).find("span").toggleClass('glyphicon-sort-by-attributes-alt');
     }
 });
 

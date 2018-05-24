@@ -7,6 +7,7 @@
             <option id="status-stopped">Ремонт приостановлен, свяжитесь с администратором</option>
             <option id="status-wait">Ожидание поставки запчасти</option>
             <option id="status-request">Технический запрос</option>
+            <option id="status-failure">Отказ в гарантийном обслуживании</option>
         </select>
     </div>
     <div class="col-sm-3">
@@ -19,7 +20,7 @@
     </div>
     <div class="col-sm-3">
         <div class="input-group">
-            <input type="text" id="search-text" class="form-control" placeholder="СЦ / IMEI / UIN / SN">
+            <input type="text" id="search-text" class="form-control" placeholder="СЦ / IMEI / УИН / SN">
             <span class="input-group-btn">
                 <button class="btn btn-default" type="button" id="search">Искать</button>
             </span>
@@ -34,95 +35,104 @@
     <thead>
         <tr>
             <th>Заказ на ремонт</th>
-            <th>Дата принятия</th>
-            <th>Статус заявки</th>
+            <th class="date-col">Дата принятия<span style="float: right" class="glyphicon glyphicon-sort-by-attributes" aria-hidden="true"></span></th>
+            <th class="status-col">Статус заявки<span style="float: right" class="glyphicon glyphicon-sort-by-attributes" aria-hidden="true"></span></th>
             <th>IMEI</th>
-            <th>UIN</th>
+            <th>УИН</th>
             <th>SN</th>
             <th>Описание проблемы</th>
         </tr>
     </thead>
     <tbody id='orders'>
-        <tr class="success" data-status="status-done" data-date="2018.03.01">
+        <tr class="success" data-status="status-done" data-date="2018.05.01">
             <td>СЦ-23417</td>
-            <td class="order-date">2018.03.01</td>
+            <td class="order-date">2018.05.01</td>
             <td>Ремонт выполнен</td>
             <td>8716254903</td>
             <td>4726815309</td>
             <td>4625817903</td>
             <td>Разбит экран</td>
         </tr>
-        <tr class="active" data-status="status-wait" data-date="2018.03.02">
+        <tr class="active" data-status="status-wait" data-date="2018.05.02">
             <td>СЦ-23420</td>
-            <td class="order-date">2018.03.02</td>
+            <td class="order-date">2018.05.02</td>
             <td>Ожидание поставки запчасти</td>
             <td>5346981207</td>
             <td>5164083972</td>
             <td>2581043796</td>
             <td>Замена батареи</td>
         </tr>
-        <tr class="danger" data-status="status-stopped" data-date="2018.03.03">
+        <tr class="danger" data-status="status-stopped" data-date="2018.05.03">
             <td>СЦ-23480</td>
-            <td class="order-date">2018.03.03</td>
+            <td class="order-date">2018.05.03</td>
             <td>Ремонт приостановлен, свяжитесь с администратором СЦ</td>
             <td>5346981207</td>
             <td>5164083972</td>
             <td>2581043796</td>
             <td>Ремонт материнской платы</td>
         </tr>
-        <tr class="warning" data-status="status-process" data-date="2018.03.04">
+        <tr class="warning" data-status="status-process" data-date="2018.05.04">
             <td>СЦ-23421</td>
-            <td class="order-date">2018.03.04</td>
+            <td class="order-date">2018.05.04</td>
             <td>Изделие находится в ремонте</td>
             <td>4230965178</td>
             <td>1458076923</td>
             <td>2670438951</td>
             <td>Сгорел блок питания</td>
         </tr>
-        <tr class="info" data-status="status-request" data-date="2018.03.05">
+        <tr class="info" data-status="status-request" data-date="2018.05.05">
             <td>СЦ-23412</td>
-            <td class="order-date">2018.03.05</td>
+            <td class="order-date">2018.05.05</td>
             <td>Технический запрос</td>
             <td>8719325640</td>
             <td>5648372190</td>
             <td>6218075349</td>
             <td>Залитие</td>
         </tr>
-        <tr class="success" data-status="status-done" data-date="2018.03.06">
+        <tr class="success" data-status="status-done" data-date="2018.05.06">
             <td>СЦ-23488</td>
-            <td class="order-date">2018.03.06</td>
+            <td class="order-date">2018.05.06</td>
             <td>Ремонт выполнен</td>
             <td>9018754623</td>
             <td>2681475309</td>
             <td>0417936258</td>
             <td>Разбит экран</td>
         </tr>
-        <tr class="danger" data-status="status-stopped" data-date="2018.03.07">
+        <tr class="danger" data-status="status-stopped" data-date="2018.05.07">
             <td>СЦ-23480</td>
-            <td class="order-date">2018.03.07</td>
+            <td class="order-date">2018.05.07</td>
             <td>Ремонт приостановлен, свяжитесь с администратором СЦ</td>
             <td>5346981207</td>
             <td>5164083972</td>
             <td>2581043796</td>
             <td>Ремонт материнской платы</td>
         </tr>
-        <tr class="info" data-status="status-request" data-date="2018.03.08">
+        <tr class="info" data-status="status-request" data-date="2018.05.08">
             <td>СЦ-23485</td>
-            <td class="order-date">2018.03.08</td>
+            <td class="order-date">2018.05.08</td>
             <td>Технический запрос</td>
             <td>8719325640</td>
             <td>5648372190</td>
             <td>6218075349</td>
             <td>Залитие</td>
         </tr>
-        <tr class="warning" data-status="status-process" data-date="2018.03.09">
+        <tr class="warning" data-status="status-process" data-date="2018.05.09">
             <td>СЦ-23496</td>
-            <td class="order-date">2018.03.09</td>
+            <td class="order-date">2018.05.09</td>
             <td>Изделие находится в ремонте</td>
             <td>4230965178</td>
             <td>1458076923</td>
             <td>2670438951</td>
             <td>Сгорел блок питания</td>
+        </tr>
+        <tr class="danger" data-status="status-failure" data-date="2018.05.07">
+            <td>СЦ-83440</td>
+            <td class="order-date">2018.05.12</td>
+            <td>Отказ в гарантийном обслуживаниии</td>
+            <td>535767567</td>
+            <td>51645383972</td>
+            <td>259867866</td>
+            <td>Ремонт корпуса</td>
         </tr>
     </tbody>
 </table>
